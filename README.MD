@@ -14,7 +14,7 @@ But I decided not to do it because it maybe KISS but not the object of the test.
 https://github.com/florianv/symfony-swap This together with FOS Rest would be probably a good choice if I already had
 an application and had to integrate it there.
 
-### What I choose to do
+### What I chose to do
 So in the end I choose a way between. Still use symfony so I can use it's routing and some classes. In the frontend
 I didn't use much because I feel you want to see if I can create a backend service for this. The twig template is super
 basic without any blocks and this is on purpose. 
