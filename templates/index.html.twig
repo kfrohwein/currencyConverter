@@ -1,0 +1,29 @@
+{% extends 'master.html.twig' %}
+{% block content %}
+    <div class="pure-g center">
+        <div class="pure-u-1-2">
+            <h1>Currency Converter</h1>
+            <form class=" pure-form-stacked">
+                <fieldset>
+                    <legend>Please choose a currency and enter a value</legend>
+
+                    <label for="currencySource">Exchange from</label>
+                    {% include 'includes/currencyCodes.html.twig' with {'id':'currencySource'} %}
+
+                    <label for="currencyTarget">To</label>
+                    {% include 'includes/currencyCodes.html.twig' with {'id':'currencyTarget'} %}
+
+                    <label for="amount">Value</label>
+                    <input id="amount" type="text" value="" placeholder="123,456">
+
+
+                    <h3>Result</h3>
+                    <div id="result">00,00</div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
