@@ -1,7 +1,7 @@
 {% extends 'master.html.twig' %}
 {% block content %}
     <div class="pure-g center">
-        <div class="pure-u-1-2">
+        <div class="pure-u-1-2 content">
             <h1>Currency Converter</h1>
             <form class=" pure-form-stacked">
                 <fieldset>
@@ -14,12 +14,12 @@
                     {% include 'includes/currencyCodes.html.twig' with {'id':'currencyTarget'} %}
 
                     <label for="amount">Value</label>
-                    <input id="amount" type="text" value="" placeholder="123,456">
-
-
-                    <h3>Result</h3>
-                    <div id="result">00,00</div>
-
+                    <input id="amount" type="text" value="" placeholder="123.456">
+                    <span class="help">Please use a "." as decimal separator</span>
+                    <div class="resultBox">
+                        <h3>Result</h3>
+                        <div id="result">00,00 <span id="resultCurrency"></span></div>
+                    </div>
                 </fieldset>
 
             </form>

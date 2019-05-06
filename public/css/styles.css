@@ -1,3 +1,48 @@
+body {
+    background-color: #eeeeee;
+}
+
+label {
+    font-size: large;
+    padding-top: 10px;
+}
+
+select {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+#result {
+    font-size: x-large;
+}
+
 .center {
     justify-content: center;
+}
+
+.content {
+    padding: 20px;
+    border-style: solid;
+    border-width: 0 1px 0 1px;
+    border-color: #cccccc;
+    background-color: #ffffff;
+}
+
+.help {
+    font-size: small;
+    color: #868686;
+}
+
+.resultBox {
+    margin-top:50px;
 }
