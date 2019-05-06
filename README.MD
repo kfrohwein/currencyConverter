@@ -22,4 +22,20 @@ basic without any blocks and this is on purpose.
 I decided not to use the symfony form component because the demo seems too small for me and XSS protection or advanced
 validation don't seem necessary.
 
+All in all it is a simple approach in the end. I collect the given values in a value object put that into the conversion
+service and let the service decide which conversion classes are called from the factory. I faked that and it is only
+one that loads a local file for the values. I didn't want to install guzzle to really implement it. But by this
+abstraction every found currency rate service could use a common or special backend for loading the rate.
+
+I didn't spyed too much how florianv did implement this. imho he overdid it here and there. I guess he didn't have
+somebody to review his code and talk about. He really tries hard to implement CLEAN OOP code. Well maybe I am overdoing
+it as well -_-
+
+### Tests
+Sorry no tests. But well if you like to take a look at my codeception talk
+https://docs.google.com/presentation/d/1G50zxjPdH-bwTemia96m9Uxct_j85tKj7qt-YfTe-hc/edit?usp=sharing
+At least I believe I know something about tests ;)
+
+### ISO 4217
 The currency strings are from https://de.wikipedia.org/wiki/ISO_4217
+This should be used in an abstraction so we can make sure the strings are correct. Currently I only use simple strings.

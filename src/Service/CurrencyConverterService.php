@@ -1,15 +1,28 @@
 <?php
 
-namespace App\service;
+namespace App\Service;
+
+use App\DataTransferObject\ConversionDTO;
+use App\ValueObject\ConversionVO;
 
 class CurrencyConverterService
 {
 
-    public function convert(
-        string $currencySource,
-        string $currencyTarget,
-        string $amount
-    ) {
+    /**
+     * Convert the given amount to the desired currency.
+     *
+     * @param ConversionVO $conversionVO
+     * @return ConversionDTO
+     */
+    public function convert(ConversionVO $conversionVO
+    ): ConversionDTO {
 
+
+
+        return new ConversionDTO(
+            $conversionVO->getCurrencyTarget(),
+            100,
+            'All went well'
+        );
     }
 }
