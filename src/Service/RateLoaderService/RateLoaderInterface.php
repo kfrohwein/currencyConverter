@@ -7,9 +7,9 @@ interface RateLoaderInterface
     /**
      * Load a rate for conversion.
      *
-     * @param string $sourceCurrency
-     * @param string $targetCurrency
+     * @param string $currencySource
+     * @param string $currencyTarget
      * @return float
      */
-    public function loadRate(string $sourceCurrency, string $targetCurrency): float;
+    public function loadRate(string $currencySource, string $currencyTarget): float;
 }

@@ -3,22 +3,29 @@
     <div class="pure-g center">
         <div class="pure-u-1-2 content">
             <h1>Currency Converter</h1>
-            <form class=" pure-form-stacked">
+            <form id="currencyConversionForm" class=" pure-form-stacked">
                 <fieldset>
-                    <legend>Please choose a currency and enter a value</legend>
+                    <div>
+                        <legend>Please choose a currency and enter a value</legend>
 
-                    <label for="currencySource">Exchange from</label>
-                    {% include 'includes/currencyCodes.html.twig' with {'id':'currencySource'} %}
+                        <label for="currencySource">Exchange from</label>
+                        {% include 'includes/currencyCodes.html.twig' with {'id':'currencySource'} %}
 
-                    <label for="currencyTarget">To</label>
-                    {% include 'includes/currencyCodes.html.twig' with {'id':'currencyTarget'} %}
+                        <label for="currencyTarget">To</label>
+                        {% include 'includes/currencyCodes.html.twig' with {'id':'currencyTarget'} %}
 
-                    <label for="amount">Value</label>
-                    <input id="amount" type="text" value="" placeholder="123.456">
-                    <span class="help">Please use a "." as decimal separator</span>
+                        <label for="amount">Value</label>
+                        <input id="amount" type="text" value="" placeholder="123.456">
+                        <span class="help">Please use a "." as decimal separator</span>
+                    </div>
+                    <div>
+                        <button type="submit" class="pure-button pure-button-primary">Convert</button>
+                    </div>
+
                     <div class="resultBox">
                         <h3>Result</h3>
-                        <div id="result">00,00 <span id="resultCurrency"></span></div>
+                        <div><span id="result">00.00</span> <span id="resultCurrency"></span></div>
+                        <div id="message"></div>
                     </div>
                 </fieldset>
 

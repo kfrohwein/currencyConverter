@@ -18,7 +18,7 @@ class FileRateLoader implements RateLoaderInterface
      * {@inheritDoc}
      * @throws Exception
      */
-    public function loadRate(string $sourceCurrency, string $targetCurrency): float
+    public function loadRate(string $currencySource, string $currencyTarget): float
     {
         /**
          * Inside of this function we could do anything to load the data. Maybe access and REST API, SOAP, who knows.
@@ -30,8 +30,8 @@ class FileRateLoader implements RateLoaderInterface
 
         while (($line = fgetcsv($handle)) !== FALSE) {
             if (
-                $line[0] === $sourceCurrency
-                && $line[1] === $targetCurrency
+                $line[0] === $currencySource
+                && $line[1] === $currencyTarget
             ) {
                 $rate = $line[2];
                 break;

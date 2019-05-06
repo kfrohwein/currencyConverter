@@ -31,6 +31,18 @@ I didn't spyed too much how florianv did implement this. imho he overdid it here
 somebody to review his code and talk about. He really tries hard to implement CLEAN OOP code. Well maybe I am overdoing
 it as well -_-
 
+### Frontend
+This is very basic. No check if the rate really is available. This could use another controller callback and tell us
+what is there. Still there might be combinations that won't have rates. So this would have to be checked on every
+change of the select box.
+The response message is ... let's again say basic...
+I used Pure CSS to have something really easy that doesn't look totally terrible.
+No SASS or things like ITCSS. And no Babel. I concentrated on PHP. Not a great UX thought...
+
+### Floats
+If I convert 10 CHF in USD the float evaluates into a 10.222999999999999.
+For anything real this shouldn't use floats!
+
 ### Tests
 Sorry no tests. But well if you like to take a look at my codeception talk
 https://docs.google.com/presentation/d/1G50zxjPdH-bwTemia96m9Uxct_j85tKj7qt-YfTe-hc/edit?usp=sharing

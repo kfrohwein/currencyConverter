@@ -5,6 +5,8 @@ index:
 currency_conversion:
     path: /convert/{currencySource}/{currencyTarget}/{amount}
     controller: App\Controller\CurrencyConverterController::convert
+    defaults:
+        amount: 0
     requirements:
         currencySource: '[A-Z]{3}'
         currencyTarget: '[A-Z]{3}'
